@@ -166,7 +166,16 @@ public class Board {
 
 	}
 
-	// Maybe I want an enum for sides?
+	/* Maybe I want an enum for sides?
+	 * Check to see if the piece is surrouned on either 
+	 *   N 
+	 * W x E
+	 *   S
+	 * or if it surrounded like
+	 * NW   NE
+	 *    x 
+	 * SW   SE
+	*/
 	public boolean captureBySiege(int x, int y, Piece p,
 			ArrayList<Piece> otherside) {
 		boolean north = false;
@@ -252,6 +261,13 @@ public class Board {
 		} else {
 			return false;
 		}
+	}
+
+	/* Checks to see if the piece could move to a piece of equal number on its
+	 * next turn.
+	*/
+	public boolean captureByEquality() {
+
 	}
 
 	public String toString() {
